@@ -12,10 +12,10 @@ cd ../notification_app_be && npm install
 
 3. Run services:
 ```bash
-# Vehicle Maintenance Scheduler (port 3000)
+
 cd vehicle_maintenance_scheduler && npm start
 
-# Notification App Backend (port 4000)
+
 cd notification_app_be && npm start
 ```
 
@@ -53,8 +53,12 @@ API response screenshots (Postman) for the Vehicle Scheduler are vehicle_schedul
 <img width="830" height="885" alt="vehicle_scheduler_output_postman" src="https://github.com/user-attachments/assets/325d2ffc-e3fc-40c8-8df9-703880ed589f" />
 
 
+
+Local host output for priority inbox
+
 <img width="1401" height="803" alt="priority_inbox_output" src="https://github.com/user-attachments/assets/18d7eaf6-a07e-4bcf-b6a1-daeefd809ca3" />
 
+Local host output for vehicle scheduler
 
 <img width="1396" height="796" alt="vehicle_scheduler_output" src="https://github.com/user-attachments/assets/0c6f0717-bf4c-409b-8ece-0aa3f7119569" />
 
