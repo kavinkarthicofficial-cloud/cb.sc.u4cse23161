@@ -1,24 +1,3 @@
- Project Structure
-
-```
-├── logging_middleware/              # Reusable logging middleware package
-│   ├── config.js                    # Configuration & credentials
-│   └── index.js                     # Log(stack, level, pkg, message)
-│
-├── vehicle_maintenance_scheduler/   # Vehicle Maintenance Scheduler Microservice
-│   ├── services/
-│   │   └── depotService.js          # API service for depots & vehicles
-│   ├── knapsack.js                  # 0/1 Knapsack DP algorithm
-│   └── index.js                     # Express server (port 3000)
-│
-├── notification_app_be/             # Notification Backend - Priority Inbox (Stage 6)
-│   ├── priorityHeap.js              # Min-Heap data structure
-│   └── index.js                     # Express server (port 4000)
-│
-├── notification_system_design.md    # Stages 1-6 system design document
-├── .gitignore
-└── README.md
-```
 
  Setup
 
@@ -39,74 +18,6 @@ cd vehicle_maintenance_scheduler && npm start
 # Notification App Backend (port 4000)
 cd notification_app_be && npm start
 ```
-
-API Endpoints
-
- Vehicle Maintenance Scheduler (Port 3000)
-- `GET /schedule` — Optimal maintenance schedule for all depots
-- `GET /schedule/:depotId` — Schedule for a specific depot
-- `GET /health` — Health check
-
- Notification App Backend (Port 4000)
-- `GET /notifications/priority?n=10` — Top N priority notifications
-- `GET /notifications` — All notifications
-- `GET /health` — Health check
-
-
-Campus Hiring Evaluation — Backend Track
-
-Project Structure
-
-├── logging_middleware/              # Reusable logging middleware package
-│   ├── config.js                    # Credentials (see Setup — do not commit)
-│   └── index.js                     # Log(stack, level, pkg, message)
-│
-├── vehicle_scheduling/              # Vehicle Maintenance Scheduler Microservice
-│   ├── services/
-│   │   └── depotService.js          # Fetches depots & vehicles from evaluation API
-│   ├── knapsack.js                  # 0/1 Knapsack DP algorithm (no external libs)
-│   └── index.js                     # Express server (port 3000)
-│
-├── notification_app_be/             # Campus Notifications Backend (Stages 1–6)
-│   ├── priorityHeap.js              # Min-Heap for real-time top-N maintenance
-│   ├── index.js                     # Express server (port 4000)
-│   └── screenshots/                 # Output screenshots (Stage 6)
-│
-├── notification_system_design.md    # Full system design — Stages 1 through 6
-├── .env.example                     # Environment variable template
-├── .gitignore
-└── README.md
-
-
-Setup
-
-Prerequisites
-- Node.js >= 18.0.0
-- npm
-
-1. Configure credentials
-
-Copy the environment template and fill in your registered credentials:
-
-cp .env.example .env
-
-
-.env is gitignored. Never commit your clientID, clientSecret, or accessCode directly into any source file.
-
-2. Install dependencies
-
-cd logging_middleware && npm install && cd ..
-cd vehicle_scheduling && npm install && cd ..
-cd notification_app_be && npm install && cd ..
-
-
-3. Run services
-
- Vehicle Maintenance Scheduler — port 3000
-cd vehicle_scheduling && npm start
-
- Notification App Backend — port 4000
-cd notification_app_be && npm start
 
 
 API Endpoints
@@ -140,3 +51,10 @@ Stage 6 output screenshots showing priority notification results are priority_in
 API response screenshots (Postman) for the Vehicle Scheduler are vehicle_scheduler_output_postman.png
 
 <img width="830" height="885" alt="vehicle_scheduler_output_postman" src="https://github.com/user-attachments/assets/325d2ffc-e3fc-40c8-8df9-703880ed589f" />
+
+
+<img width="1401" height="803" alt="priority_inbox_output" src="https://github.com/user-attachments/assets/18d7eaf6-a07e-4bcf-b6a1-daeefd809ca3" />
+
+
+<img width="1396" height="796" alt="vehicle_scheduler_output" src="https://github.com/user-attachments/assets/0c6f0717-bf4c-409b-8ece-0aa3f7119569" />
+
