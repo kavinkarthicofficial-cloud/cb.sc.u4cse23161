@@ -129,6 +129,7 @@ The full system design covering all six stages — REST API contract, database s
 
 Output Screenshots
 
-Stage 6 output screenshots showing priority notification results are in notification_app_be/screenshots/.
+Stage 6 output screenshots showing priority notification results are priority_inbox_output_postman.png.
 
-API response screenshots (Postman/Insomnia) for the Vehicle Scheduler are in vehicle_scheduling/screenshots/.
+
+API response screenshots (Postman) for the Vehicle Scheduler are vehicle_scheduler_output_postman.png
