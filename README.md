@@ -1,6 +1,4 @@
-# cb.sc.u4cse23161
-
-## Project Structure
+ Project Structure
 
 ```
 ├── logging_middleware/              # Reusable logging middleware package
@@ -22,7 +20,7 @@
 └── README.md
 ```
 
-## Setup
+ Setup
 
 1. Install dependencies in each folder:
 ```bash
@@ -42,14 +40,14 @@ cd vehicle_maintenance_scheduler && npm start
 cd notification_app_be && npm start
 ```
 
-## API Endpoints
+API Endpoints
 
-### Vehicle Maintenance Scheduler (Port 3000)
+ Vehicle Maintenance Scheduler (Port 3000)
 - `GET /schedule` — Optimal maintenance schedule for all depots
 - `GET /schedule/:depotId` — Schedule for a specific depot
 - `GET /health` — Health check
 
-### Notification App Backend (Port 4000)
+ Notification App Backend (Port 4000)
 - `GET /notifications/priority?n=10` — Top N priority notifications
 - `GET /notifications` — All notifications
 - `GET /health` — Health check
