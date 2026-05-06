@@ -1,0 +1,97 @@
+{
+    "success": true,
+    "topN": 10,
+    "totalNotifications": 20,
+    "priorityInbox": [
+        {
+            "rank": 1,
+            "id": "1f4999bd-7f89-434f-8e00-5ade2f0db69a",
+            "type": "Placement",
+            "typeWeight": 3,
+            "message": "CSX Corporation hiring",
+            "timestamp": "2026-05-06 08:12:01",
+            "priorityScore": 3989.95
+        },
+        {
+            "rank": 2,
+            "id": "964b7741-6b7a-405a-8717-37d7ec75f514",
+            "type": "Placement",
+            "typeWeight": 3,
+            "message": "Meta Platforms Inc. hiring",
+            "timestamp": "2026-05-06 05:42:53",
+            "priorityScore": 3986.51
+        },
+        {
+            "rank": 3,
+            "id": "d3f5d628-4b7b-46ea-8a29-84a0c0a52d67",
+            "type": "Placement",
+            "typeWeight": 3,
+            "message": "Marriott International Inc. hiring",
+            "timestamp": "2026-05-06 04:12:33",
+            "priorityScore": 3984.42
+        },
+        {
+            "rank": 4,
+            "id": "367a3dd7-537f-4c8d-b7c6-959387968542",
+            "type": "Placement",
+            "typeWeight": 3,
+            "message": "Broadcom Inc. hiring",
+            "timestamp": "2026-05-06 01:13:01",
+            "priorityScore": 3980.27
+        },
+        {
+            "rank": 5,
+            "id": "5193dfa6-0876-46bc-8825-1a6dc93a8586",
+            "type": "Placement",
+            "typeWeight": 3,
+            "message": "Advanced Micro Devices Inc. hiring",
+            "timestamp": "2026-05-06 01:11:57",
+            "priorityScore": 3980.24
+        },
+        {
+            "rank": 6,
+            "id": "212ba2d9-4594-4083-b288-9f40e94d564c",
+            "type": "Placement",
+            "typeWeight": 3,
+            "message": "Broadcom Inc. hiring",
+            "timestamp": "2026-05-05 23:12:05",
+            "priorityScore": 3977.47
+        },
+        {
+            "rank": 7,
+            "id": "6cf2b007-bb4f-4b70-81c8-dd07fa023f17",
+            "type": "Placement",
+            "typeWeight": 3,
+            "message": "Booking Holdings Inc. hiring",
+            "timestamp": "2026-05-05 20:42:21",
+            "priorityScore": 3974.01
+        },
+        {
+            "rank": 8,
+            "id": "f3f1c3a4-2f11-4a3a-8214-d99de5745cb5",
+            "type": "Placement",
+            "typeWeight": 3,
+            "message": "Amazon.com Inc. hiring",
+            "timestamp": "2026-05-05 19:12:57",
+            "priorityScore": 3971.94
+        },
+        {
+            "rank": 9,
+            "id": "42c303cb-7aeb-4b20-96cf-6112cfee313f",
+            "type": "Result",
+            "typeWeight": 2,
+            "message": "mid-sem",
+            "timestamp": "2026-05-06 08:42:09",
+            "priorityScore": 2990.65
+        },
+        {
+            "rank": 10,
+            "id": "b90abc21-3fed-43be-a05b-42a077280172",
+            "type": "Result",
+            "typeWeight": 2,
+            "message": "internal",
+            "timestamp": "2026-05-06 08:13:09",
+            "priorityScore": 2989.98
+        }
+    ]
+}

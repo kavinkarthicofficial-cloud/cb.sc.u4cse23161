@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Output - Vehicle Maintenance Scheduler</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1e1e2e; color: #cdd6f4; font-family: 'Consolas', 'Courier New', monospace; padding: 20px; }
+    .header { background: #313244; padding: 12px 16px; border-radius: 8px 8px 0 0; display: flex; align-items: center; gap: 10px; }
+    .method { background: #a6e3a1; color: #1e1e2e; padding: 4px 12px; border-radius: 4px; font-weight: bold; font-size: 14px; }
+    .url { color: #89b4fa; font-size: 14px; }
+    .status { background: #a6e3a1; color: #1e1e2e; padding: 4px 12px; border-radius: 4px; font-weight: bold; margin-left: auto; }
+    .time { color: #94e2d5; margin-left: 10px; }
+    .response { background: #181825; padding: 16px; border-radius: 0 0 8px 8px; max-height: 700px; overflow-y: auto; }
+    pre { font-size: 12px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; }
+    .key { color: #89b4fa; }
+    .string { color: #a6e3a1; }
+    .number { color: #fab387; }
+    .bool { color: #f38ba8; }
+    .section { margin-bottom: 20px; }
+    h2 { color: #cba6f7; margin-bottom: 10px; font-size: 16px; }
+    .badge { display: inline-block; background: #45475a; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const endpoints = [
+      { method: 'GET', url: 'http://localhost:3000/schedule', label: 'All Depots Schedule' },
+      { method: 'GET', url: 'http://localhost:3000/schedule/1', label: 'Depot 1 Schedule' },
+      { method: 'GET', url: 'http://localhost:3000/health', label: 'Health Check' },
+    ];
+
+    async function fetchAndRender() {
+      const app = document.getElementById('app');
+      for (const ep of endpoints) {
+        const section = document.createElement('div');
+        section.className = 'section';
+        const start = performance.now();
+        try {
+          const res = await fetch(ep.url);
+          const elapsed = Math.round(performance.now() - start);
+          const data = await res.json();
+          section.innerHTML = `
+            <h2>${ep.label}</h2>
+            <div class="header">
+              <span class="method">${ep.method}</span>
+              <span class="url">${ep.url}</span>
+              <span class="status">200 OK</span>
+              <span class="time">${elapsed}ms</span>
+            </div>
+            <div class="response"><pre>${syntaxHighlight(JSON.stringify(data, null, 2))}</pre></div>
+          `;
+        } catch(e) {
+          section.innerHTML = `<h2>${ep.label}</h2><div class="response"><pre style="color:#f38ba8">Error: ${e.message}</pre></div>`;
+        }
+        app.appendChild(section);
+      }
+    }
+
+    function syntaxHighlight(json) {
+      return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        let cls = 'number';
+        if (/^"/.test(match)) {
+          cls = /:$/.test(match) ? 'key' : 'string';
+        } else if (/true|false/.test(match)) {
+          cls = 'bool';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+      });
+    }
+
+    fetchAndRender();
+  </script>
+</body>
+</html>
