@@ -132,4 +132,11 @@ Output Screenshots
 Stage 6 output screenshots showing priority notification results are priority_inbox_output_postman.png.
 
 
+
+
+
+<img width="832" height="848" alt="priority_inbox_output_postman" src="https://github.com/user-attachments/assets/42ed6258-9190-429b-a239-cc64cc3f34ca" />
+
 API response screenshots (Postman) for the Vehicle Scheduler are vehicle_scheduler_output_postman.png
+
+<img width="830" height="885" alt="vehicle_scheduler_output_postman" src="https://github.com/user-attachments/assets/325d2ffc-e3fc-40c8-8df9-703880ed589f" />
